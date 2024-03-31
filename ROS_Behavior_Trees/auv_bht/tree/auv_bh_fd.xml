@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+<root main_tree_to_execute="MainTree">
+    <!-- Main Tree -->
+    <BehaviorTree ID="MainTree">
+        <Sequence name="MainSequence">
+            <!-- Feedback Node: Safety Checks -->
+            <Fallback name="SafetyChecks">
+                <!-- Sequence Node 1 -->
+                <Sequence name="Sequence1">
+                    <!-- Child Nodes -->
+                    <Action ID="Mission_Planner_Abort" mission_abort_status="true"/>
+                    <!-- <Action ID="Actuator_Status" /> -->
+                    <Action ID="Continue_Command_Received" />
+                    <Action ID="Leak_Status" leak_status = "true"/>
+                    
+
+                </Sequence>
+
+                <Sequence name="Sequence2">
+                    <Action ID="Set_Mission_Abort" set_mission_abort = "true"/>
+                    <Action ID="Go_To_Surface" go_to_surface = "true"/>
+                </Sequence>
+            </Fallback>
+
+            <Fallback name="Navigation Started">
+                <Action ID="Path_Obstacle_Free" path_obstacle_free = "false"/>
+                <Action ID="Avoid_Obstacles" avoid_obstacles = "true"/>
+            </Fallback>
+
+            <!-- <Fallback name="System_Preparation">
+                <Sequence name="System_Preparation_Checks">
+                    <Fallback>
+                        <Action ID="Wait_For_Launch_Command"/>
+                        <Action ID="Launch_Command_Received"/>
+                    </Fallback>
+
+                    <Fallback>
+                        <Action ID="Payloads_Are_Not_Ready"/>
+                        <Action ID="Payloads_Are_Ready"/>
+                    </Fallback>
+
+                    <Fallback>
+                        <Action ID="Wait_For_Continue"/>
+                        <Action ID="Continue_Command_Received"/>
+                    </Fallback>
+                </Sequence>
+            <Action ID="Continue_Command_Received"/>    
+            </Fallback>
+
+            <Fallback name="Check_For_Waypoints">
+                <Sequence name="Waypoint_Checks">
+                    <Fallback>
+                        <Action ID="Not_On_Surface"/>
+                        <Action ID="Go_To_Surface"/>
+                    </Fallback>
+
+                    <Fallback>
+                        <Action ID="No_Commanded_Waypoints"/>
+                        <Action ID="Update_Commanded_Waypoints"/>
+                    </Fallback>
+
+                    <Fallback>
+                        <Action ID="No_Autonomy_Waypoints"/>
+                        <Action ID="Update_Autonomy_Waypoints"/>
+                    </Fallback>
+                </Sequence>
+            <Action ID="Mission_Synchronised_With_Waypoints"/>    
+            </Fallback>
+
+            <Fallback name="Mission_Execution">
+                <Sequence name="Update_Waypts">
+                    <Action ID="Update_Target_Waypoints"/>
+
+                    <Fallback>
+                        <Action ID="Go_To_Target_Waypoint"/>
+                        <Action ID="At_Target_Waypoint"/>
+                    </Fallback>
+
+                </Sequence>
+            <Action ID="Mission_Complete"/>    
+            </Fallback>
+
+            <Fallback name="Mission_Finalisation">
+                <Sequence name="Shut_Down_Sequence">
+
+                    <Fallback>
+                        <Action ID="Shutdown_Payloads"/>
+                        <Action ID="Payload_Is_Off"/>
+                    </Fallback>
+
+                    <Fallback>
+                        <Action ID="Go_To_Surface"/>
+                        <Action ID="At_Surface"/>
+                    </Fallback>
+
+                </Sequence>
+            <Action ID="Mission_Done"/>    
+            </Fallback> -->
+
+        </Sequence>
+    </BehaviorTree>
+</root>
+

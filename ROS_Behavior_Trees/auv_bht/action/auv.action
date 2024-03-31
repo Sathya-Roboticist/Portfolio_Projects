@@ -1,0 +1,17 @@
+#goal definition
+float64 goal
+float64 thrust
+bool status
+bool check
+---
+#result definition
+bool result
+bool success
+string message
+
+---
+#feedback
+float64 current_goal
+bool current_status
+
+ 

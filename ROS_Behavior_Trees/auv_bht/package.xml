@@ -1,0 +1,31 @@
+<package>
+  <name>auv_bht</name>
+  <version>0.0.1</version>
+  <description> tutorials to learn how to use the BehaviorTree.ROS package  </description>
+
+  <maintainer email="oriol.ruiz.celada@estudiantat.upc.edu">Oriol Ruiz</maintainer>
+  <maintainer email="jan.rosell@upc.edu">Jan Rosell</maintainer>
+
+  <license>UPC</license>
+
+  <author>Oriol Ruiz</author>
+  <author>Jan Rosell</author>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>behaviortree_cpp_v3</build_depend>
+  <build_depend>behaviortree_ros</build_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>actionlib_msgs</build_depend>
+  <build_depend>message_generation</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>behaviortree_cpp_v3</run_depend>
+  <run_depend>behaviortree_ros</run_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>actionlib_msgs</run_depend>
+  <run_depend>message_generation</run_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

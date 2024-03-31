@@ -1,0 +1,10 @@
+<launch>
+    <!-- Node 1 -->
+    <node pkg="neerakshi_controls" type="sensor_remap_dep.py" name="depth_converter" output="screen"/>
+
+    <!-- Node 2 -->
+    <node pkg="neerakshi_controls" type="sensor_remap_dvl.py" name="twist_linear_x_node" output="screen"/>
+
+    <!-- Node 3 -->
+    <node pkg="neerakshi_controls" type="sensor_remap.py" name="orientation_converter" output="screen"/>
+</launch>

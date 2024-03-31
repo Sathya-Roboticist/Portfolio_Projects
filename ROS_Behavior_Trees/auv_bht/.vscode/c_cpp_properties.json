@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/oem/pers_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/oem/pers_ws/src/auv_bht/include/**",
+        "/home/oem/pers_ws/src/BehaviorTree.CPP/include/**",
+        "/home/oem/pers_ws/src/BehaviorTree.ROS/include/**",
+        "/home/oem/pers_ws/src/turtlebot3_behavior_demos/tb3_autonomy/include/**",
+        "/home/oem/pers_ws/src/tutorials_behaviortreeros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

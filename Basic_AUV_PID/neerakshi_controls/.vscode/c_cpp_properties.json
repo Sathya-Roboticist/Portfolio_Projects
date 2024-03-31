@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/oem/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/oem/catkin_ws/src/mastering_ros_2nd_ed/plugin_calculator/include/**",
+        "/home/oem/catkin_ws/src/eth-zurich-solution/smb_common_v2/smb_gazebo/include/**",
+        "/home/oem/catkin_ws/src/mastering_ros_2nd_ed/vrep_plugin/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

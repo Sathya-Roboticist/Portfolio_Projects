@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="MainTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="MainTree">
+        <Sequence name="MainSequence">
+            
+            <Parallel failure_threshold="1" name="SafetyAndObstacleChecks" success_threshold="0">
+                <Action ID="Mission_Planner_Abort" mission_abort_status="true"/>
+                <Action ID="Path_Obstacle_Free" path_obstacle_free="true"/>
+            </Parallel>
+            <Fallback name="SystemPreparation">
+                <Action ID="Wait_For_Continue_Command" wait_for_continue_command = "true"/>
+            </Fallback>
+
+            <Fallback name="command recieved">
+                <Action ID="Continue_Command_Received" continue_command_recieved = "true"/>
+            </Fallback>
+
+        </Sequence>
+    </BehaviorTree>
+</root>
